@@ -1,5 +1,11 @@
-import { ChefHatIcon } from 'lucide-react';
 import style from './styles.module.css';
-export function Titulo() {
-  return <h1 className={style.title}>JKitchen<ChefHatIcon/></h1>
+import React from 'react';
+
+type TituloProps = {
+  children: React.ReactNode;
+  type: "main" | "card";
+}
+
+export function Titulo({children, type}: TituloProps) {
+  return <h1 className={type === "main" ? style.titleMain : style.titleCard}>{children}</h1>
 }

@@ -1,14 +1,15 @@
-.title {
+.titleMain, .titleCard {
   align-items: center;
   display: flex;
+  color: var(--color-title);
   font-family: "Open Sans", serif;
   font-weight: 700;
-  font-size: 6rem;
-  justify-content: center;
-  color: var(--color-title);
 }
 
-.title svg {
-  height: 7rem;
-  width: 7rem;
+.titleMain {
+  font-size: 6rem;
+}
+
+.titleCard {
+  font-size: 2rem;
 }
