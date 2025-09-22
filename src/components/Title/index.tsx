@@ -6,6 +6,6 @@ type TituloProps = {
   type: "main" | "card";
 }
 
-export function Titulo({children, type}: TituloProps) {
+export function Title({children, type}: TituloProps) {
   return <h1 className={type === "main" ? style.titleMain : style.titleCard}>{children}</h1>
 }

@@ -1,11 +1,11 @@
 import { ChefHatIcon } from "lucide-react";
-import { Titulo } from "../Titulo";
+import { Title } from "../Title";
 import style from "./styles.module.css";
 
 export function Header() {
   return (
     <header className={style.header}>
-      <Titulo type="main">JKitchen<ChefHatIcon size={116}/></Titulo>
+      <Title type="main">JKitchen<ChefHatIcon size={116}/></Title>
     </header>
   )
 }
