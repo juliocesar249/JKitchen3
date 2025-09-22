@@ -1,0 +1,14 @@
+.title {
+  align-items: center;
+  display: flex;
+  font-family: "Open Sans", serif;
+  font-weight: 700;
+  font-size: 6rem;
+  justify-content: center;
+  color: var(--color-title);
+}
+
+.title svg {
+  height: 7rem;
+  width: 7rem;
+}

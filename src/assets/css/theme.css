@@ -1,0 +1,13 @@
+:root {
+  --color-background: #FF8EBF;
+  --color-title: #FFBDD9;
+  --color-card: #FF9EC8;
+  --color-background-selected: #FF6CAC
+}
+
+:root[data-theme="dark"] {
+  --color-background: #700030;
+  --color-title: #E00061;
+  --color-card: #92003F;
+  --color-background-selected: #FF4193
+}

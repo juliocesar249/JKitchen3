@@ -1,8 +1,15 @@
-import './App.css'
+import "./assets/css/reset.css";
+import "./assets/css/theme.css";
+import "./assets/css/global.css";
+import { Header } from "./components/Header";
+export function App() {
+  return (
+    <>
+      <Header/>
 
-function App() {
+      <main>
 
-  return <></>
+      </main>
+    </>
+  )
 }
-
-export default App
