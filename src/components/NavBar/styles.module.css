@@ -1,0 +1,33 @@
+.nav {
+  align-items: center;
+  background-color: var(--color-card);
+  border-radius: .5rem;
+  display: flex;
+  height: 7rem;
+  justify-content: center;
+  margin-top: 3rem;
+  width: 34rem;
+}
+
+.linksWrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.linksWrapper a {
+  align-items: center;
+  border: solid 3px var(--color-title);
+  border-radius: .5rem;
+  color: var(--color-title);
+  display: flex;
+  font-family: "Open Sans";
+  font-size: 1.7rem;
+  height: 4rem;
+  justify-content: center;
+  text-decoration: none;
+  width: 12rem;
+}
+
+.linkSelected {
+  background-color: var(--color-background-selected);
+}
