@@ -1,0 +1,9 @@
+.form {
+  display: flex;
+  flex-basis: initial;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: flex-start;
+  width: 70%;
+  max-width: 1920px;
+}

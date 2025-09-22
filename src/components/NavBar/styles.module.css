@@ -25,7 +25,12 @@
   height: 4rem;
   justify-content: center;
   text-decoration: none;
+  transition: all .1s ease-in-out;
   width: 12rem;
+}
+
+.linksWrapper a:hover  {
+  background-color: var(--color-background-selected);
 }
 
 .linkSelected {

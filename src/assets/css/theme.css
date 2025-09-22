@@ -2,12 +2,14 @@
   --color-background: #FF8EBF;
   --color-title: #FFBDD9;
   --color-card: #FF9EC8;
-  --color-background-selected: #FF6CAC
+  --color-background-selected: #FF6CAC;
+  --color-hover-shadow: #5a002770;
 }
 
 :root[data-theme="dark"] {
-  --color-background: #700030;
-  --color-title: #E00061;
-  --color-card: #92003F;
-  --color-background-selected: #FF4193
+  --color-background: #6a2945;
+  --color-title: #a93165;
+  --color-card: #7c3352;
+  --color-background-selected: #e46ea2;
+  --color-hover-shadow: #570e2d70;
 }
