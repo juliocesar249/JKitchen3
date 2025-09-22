@@ -1,15 +1,17 @@
 import "./assets/css/reset.css";
 import "./assets/css/theme.css";
 import "./assets/css/global.css";
-import { Header } from "./components/Header";
+import { Cardapio } from "./pages/Cardapio";
+import { MainTemplate } from "./templates/MainTemplate";
+import { Main } from "./components/Main";
 export function App() {
   return (
     <>
-      <Header/>
-
-      <main>
-
-      </main>
+      <MainTemplate>
+        <Main>
+          <Cardapio/>
+        </Main>
+      </MainTemplate>
     </>
   )
 }
