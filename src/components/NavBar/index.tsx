@@ -15,7 +15,8 @@ export function NavBar() {
     light: <MoonIcon size={40}/>
   }
 
-  function changeTheme() {
+  function changeTheme(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    e.preventDefault();
     setTheme(prev => prev === "dark" ? "light" : "dark");
   }
 

@@ -7,3 +7,21 @@
   width: 70%;
   max-width: 1920px;
 }
+
+.button {
+  background-color: transparent;
+  border: solid 3px var(--color-title);
+  border-radius: .5rem;
+  color: var(--color-title);
+  font-family: "Open Sans";
+  font-size: 1.7rem;
+  height: 4rem;
+  justify-self: center;
+  margin: 0 auto;
+  transition: all .1s ease-in-out;
+  width: 12rem;
+}
+
+.button:hover {
+  background-color: var(--color-background-selected);
+}

@@ -38,6 +38,8 @@ export function Cardapio() {
         title="Carne"
         price={20}
       />
+
+      <button type="button" className={style.button}>Finalizar</button>
     </form>
   )
 }
