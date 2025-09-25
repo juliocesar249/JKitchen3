@@ -4,6 +4,7 @@ import { useDishContext } from "../../contexts/dishContext/useDishContext";
 import { useNavigate } from "react-router";
 import { MainTemplate } from "../../templates/MainTemplate";
 import { Main } from "../../components/Main";
+import { DefaultButton } from "../../components/DefaultButton";
 
 export function Menu() {
   const { dishes, dishesToPurchase, setDishesToPurchase } = useDishContext();
@@ -45,7 +46,7 @@ export function Menu() {
             />)}
           </div>
 
-          <button type="submit" className={style.button}>Finalizar {dishesToPurchase.size}</button>
+          <DefaultButton type="submit" className={style.button}>Finalizar {dishesToPurchase.size}</DefaultButton>
         </form>
       </Main>
     </MainTemplate>
