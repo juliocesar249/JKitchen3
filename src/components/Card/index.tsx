@@ -20,6 +20,9 @@ export function Card({ imageUrl, title, price, id, checked, ...props }: CardProp
       <article className={style.card} id={id}>
         <section className={style.cardImage}>
           <img onError={handleImageNotFound} src={imageUrl} alt="Foto ilustrativa do prato" />
+          <div className={style.cardDescription}>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi corporis ea quibusdam praesentium ducimus placeat sit architecto, harum velit!</p>
+          </div>
         </section>
         <section className={style.cardInfo} >
           <p>{title}</p>

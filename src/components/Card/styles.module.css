@@ -13,13 +13,110 @@
 .cardImage {
   border-bottom: solid .3rem var(--color-title);
   height: 9rem;
+  overflow: hidden;
+  position: relative;
   width: 16rem;
 }
 
 .cardImage img {
   display: block;
+  position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.card:hover .cardImage img {
+  animation-name: slide-img;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.cardDescription {
+  align-items: center;
+  background-color: var(--color-card);
+  bottom: 0px;
+  color: #fff;
+  display: flex;
+  font-family: "Open Sans";
+  height: 9rem;
+  justify-content: center;
+  position: absolute;
+  right: 16.1rem;
+  width: 16rem;
+}
+
+.cardDescription p {
+  padding: 2px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.card:hover .cardDescription {
+  animation-name: slide-desc;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide-desc {
+  0% {
+    right: 16.1rem;
+  }
+
+  15% {
+    right: 16.1rem;
+  }
+
+  25% {
+    right: 0;
+  }
+
+  50% {
+    right: 0;
+  }
+
+  60% {
+    right: 0;
+  }
+
+  70% {
+    right: 0;
+  }
+
+  100% {
+    right: 16.1rem;
+  }
+}
+
+@keyframes slide-img {
+  0% {
+    right: 0;
+  }
+
+  15% {
+    right: 0;
+  }
+
+  25% {
+    right: -16.1rem;
+  }
+
+  50% {
+    right: -16.1rem;
+  }
+
+  60% {
+    right: -16.1rem;
+  }
+
+  70% {
+    right: -16.1rem;
+  }
+
+  100% {
+    right: 0;
+  }
 }
 
 .cardInfo {
@@ -40,7 +137,6 @@
   font-family: "Open Sans", serif;
   font-size: 1.4rem;
 }
-
 
 .cardInfo:first-child {
   grid-area: titulo;
