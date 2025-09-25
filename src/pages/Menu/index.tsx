@@ -41,6 +41,7 @@ export function Menu() {
               title={dish.name}
               price={dish.price}
               id={dish.id}
+              description={dish.description}
               checked={dishesToPurchase.has(dish.id)}
               onClick={toggleBuyProduct}
             />)}

@@ -1,3 +1,4 @@
+import { BadgeAlertIcon } from "lucide-react";
 import { formatPrice } from "../../utils/formatPrice";
 import style from "./styles.module.css";
 
@@ -7,13 +8,16 @@ type CardProps = {
   price: number;
   id: string;
   checked: boolean;
+  description?: string;
 } & React.ComponentProps<'label'>
 
-export function Card({ imageUrl, title, price, id, checked, ...props }: CardProps) {
+export function Card({ imageUrl, title, price, id, checked, description = "", ...props }: CardProps) {
   function handleImageNotFound(e:React.SyntheticEvent<HTMLImageElement, Event>) {
     const target = e.target as HTMLImageElement;
     target.src = "/images/imageNotFound.webp";
   }
+
+  // if(description.length === 0) description = `Este produto não possui descrição :(`;
 
   return (
     <label {...props}>
@@ -21,7 +25,9 @@ export function Card({ imageUrl, title, price, id, checked, ...props }: CardProp
         <section className={style.cardImage}>
           <img onError={handleImageNotFound} src={imageUrl} alt="Foto ilustrativa do prato" />
           <div className={style.cardDescription}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam animi corporis ea quibusdam praesentium ducimus placeat sit architecto, harum velit!</p>
+            <p>
+              {description.length === 0 ? <><span><BadgeAlertIcon/></span>Este produto não possui descrição :(</> : description}
+            </p>
           </div>
         </section>
         <section className={style.cardInfo} >

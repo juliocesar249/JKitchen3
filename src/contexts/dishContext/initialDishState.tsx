@@ -18,7 +18,8 @@ export const initialDishState: DishModel[] = [
     name: "Carne",
     imageSource: "https://pixabay.com/get/ge6d05f3b8937873b673b8fe85453ecdc339fadcb5d722227a6571395ba21181a041613691c05e37dbc39e193076251c52db80b34af05009d916b9f68925e5444_1920.jpg",
     id: uuid(),
-    price: 2
+    price: 2,
+    description: "Carne bem passada, temperada e frita no momento em que pedir seu prato!"
   },
   {
     name: "Linguiça",

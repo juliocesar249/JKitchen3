@@ -3,4 +3,5 @@ export type DishModel = {
   imageSource?: string
   id: string;
   price: number;
+  description?: string;
 }
