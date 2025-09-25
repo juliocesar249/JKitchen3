@@ -17,8 +17,6 @@ export function Card({ imageUrl, title, price, id, checked, description = "", ..
     target.src = "/images/imageNotFound.webp";
   }
 
-  // if(description.length === 0) description = `Este produto não possui descrição :(`;
-
   return (
     <label {...props}>
       <article className={style.card} id={id}>
