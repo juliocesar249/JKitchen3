@@ -12,7 +12,7 @@ type CardProps = {
 export function Card({ imageUrl, title, price, id, checked, ...props }: CardProps) {
   function handleImageNotFound(e:React.SyntheticEvent<HTMLImageElement, Event>) {
     const target = e.target as HTMLImageElement;
-    target.src = "/public/images/imageNotFound.webp";
+    target.src = "/images/imageNotFound.webp";
   }
 
   return (
