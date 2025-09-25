@@ -10,11 +10,15 @@ type CardProps = {
 } & React.ComponentProps<'label'>
 
 export function Card({ imageUrl, title, price, id, checked, ...props }: CardProps) {
+  function handleImageNotFound(e) {
+    e.target.src = "/public/images/imageNotFound.webp";
+  }
+
   return (
     <label {...props}>
       <article className={style.card} id={id}>
         <section className={style.cardImage}>
-          <img src={imageUrl} alt="Foto ilustrativa do prato" />
+          <img onError={handleImageNotFound} src={imageUrl} alt="Foto ilustrativa do prato" />
         </section>
         <section className={style.cardInfo} >
           <p>{title}</p>
