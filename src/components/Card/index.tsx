@@ -1,22 +1,25 @@
+import { formatPrice } from "../../utils/formatPrice";
 import style from "./styles.module.css";
 
 type CardProps = {
   imageUrl: string;
   title: string;
-  price: number
-}
+  price: number;
+  id: string;
+  checked: boolean;
+} & React.ComponentProps<'label'>
 
-export function Card({ imageUrl, title, price }: CardProps) {
+export function Card({ imageUrl, title, price, id, checked, ...props }: CardProps) {
   return (
-    <label>
-      <article className={style.card}>
+    <label {...props}>
+      <article className={style.card} id={id}>
         <section className={style.cardImage}>
-          <img src={imageUrl} alt="Foto ilustrativa do prato" width="100%" />
+          <img src={imageUrl} alt="Foto ilustrativa do prato" />
         </section>
         <section className={style.cardInfo} >
           <p>{title}</p>
-          <p>R${price}</p>
-          <input type="checkbox" name="comprar" />
+          <p>{formatPrice(price)}</p>
+          <input defaultChecked={checked} type="checkbox" name={title.toLowerCase()} id={id}/>
         </section>
       </article>
     </label>
