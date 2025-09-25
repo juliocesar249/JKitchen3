@@ -1,8 +1,18 @@
 .form {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  grid-template-rows: auto;
+  gap: 5rem;
+}
+
+.products {
   display: flex;
   flex-basis: initial;
   flex-wrap: wrap;
   gap: 5rem;
+  grid-column: 1;
+  grid-row: 1;
   justify-content: flex-start;
   width: 70%;
   max-width: 1920px;
@@ -17,6 +27,8 @@
   display: flex;
   font-family: "Open Sans";
   font-size: 1.7rem;
+  grid-column: 1;
+  grid-row: 2;
   height: 4rem;
   justify-content: center;
   justify-self: center;

@@ -32,7 +32,8 @@ export function Menu() {
       <Main>
         <form action="#" onSubmit={handleSubmit} className={style.form}>
 
-          {dishes.map(dish =>
+          <div className={style.products}>
+            {dishes.map(dish =>
             <Card
               key={dish.id}
               imageUrl={dish.imageSource || "https://placehold.co/1920x1080"}
@@ -42,6 +43,7 @@ export function Menu() {
               checked={dishesToPurchase.has(dish.id)}
               onClick={toggleBuyProduct}
             />)}
+          </div>
 
           <button type="submit" className={style.button}>Finalizar {dishesToPurchase.size}</button>
         </form>
