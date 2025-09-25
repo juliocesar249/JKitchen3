@@ -1,6 +1,6 @@
 import type React from "react";
 import { DishContext} from "./DishContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { initialDishState } from "./initialDishState";
 import type { DishModel } from "../../models/DishModel";
 
