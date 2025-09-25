@@ -6,4 +6,10 @@
 
 - React
 - TypeScript
+- Vite
 - Bun
+
+## Bibliotecas React
+
+- Lucide React
+- React Router
