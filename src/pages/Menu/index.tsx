@@ -47,7 +47,7 @@ export function Menu() {
             />)}
           </div>
 
-          <DefaultButton type="submit" className={style.button}>Finalizar {dishesToPurchase.size}</DefaultButton>
+          <DefaultButton type="submit">Finalizar {dishesToPurchase.size}</DefaultButton>
         </form>
       </Main>
     </MainTemplate>

@@ -17,3 +17,16 @@
   transition: all .1s ease-in-out;
   width: 12rem;
 }
+
+.button:hover {
+  background-color: var(--color-background-selected);
+}
+
+.button:disabled {
+  border-color: var(--color-background-selected);
+  color: var(--color-background-selected);
+}
+
+.button:disabled:hover {
+  background-color: var(--color-title);
+}

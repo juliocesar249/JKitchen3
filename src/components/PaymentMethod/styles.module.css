@@ -1,0 +1,85 @@
+.form, .methodsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.methodsWrapper {
+  align-items: center;
+  background-color: var(--color-card);
+  border: solid .2rem var(--color-title);
+  border-radius: .4rem;
+  justify-content: space-evenly;
+}
+
+.methods {
+  border-top: solid .2rem var(--color-title);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  width: 34.5rem;
+}
+
+.methods label {
+  align-items: center;
+  color: var(--color-title);
+  display: flex;
+  font-family: "Open Sans";
+  font-size: 1.3rem;
+  gap: .3rem;
+  justify-content: start;
+}
+
+.methods label p {
+  align-items: center;
+  display: flex;
+  gap: inherit;
+}
+
+.form svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.methods input[type="text"] {
+  background-color: var(--color-background-selected);
+  border: solid .2rem var(--color-title);
+  border-radius: .4rem;
+  color: var(--color-title);
+  font-family: "Open Sans";
+  font-size: 1.3rem;
+  height: 2rem;
+  transition: all .2s ease-in-out;
+  padding: 0 .4rem;
+  width: 55%;
+}
+
+.methods input[type="text"]::placeholder {
+  color: var(--color-placeholder-text);
+  font-family: "Open Sans";
+  font-size: 1.3rem;
+}
+
+.methods input[type="text"]:focus {
+  background-color: var(--color-title);
+  border-color: var(--color-background-selected);
+  color: var(--color-background-selected);
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: .2rem;
+}
+
+.pixIcon {
+  background-color: var(--color-title);
+  height: 2rem;
+  mask: url("../../assets/images/pix.svg") no-repeat center;
+  mask-size: contain;
+  width: 2rem;
+  -webkit-mask: url("../../assets/images/pix.svg") no-repeat center;
+  -webkit-mask-size: contain;
+}

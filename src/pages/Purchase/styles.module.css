@@ -1,0 +1,8 @@
+.purchaseWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.purchaseWrapper div {
+  display: flex;
+}

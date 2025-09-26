@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   color: var(--color-title);
+  justify-content: center;
   font-family: "Open Sans", serif;
   font-weight: 700;
 }

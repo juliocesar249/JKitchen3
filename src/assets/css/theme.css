@@ -4,6 +4,7 @@
   --color-card: #FF9EC8;
   --color-background-selected: #FF6CAC;
   --color-hover-shadow: #5a002770;
+  --color-placeholder-text: #FF8CBE;
 }
 
 :root[data-theme="dark"] {
@@ -12,4 +13,5 @@
   --color-card: #7c3352;
   --color-background-selected: #e46ea2;
   --color-hover-shadow: #570e2d70;
+  --color-placeholder-text: #FF8CBE;
 }
