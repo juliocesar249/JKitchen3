@@ -1,7 +1,7 @@
 .form, .methodsWrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .methodsWrapper {
@@ -9,7 +9,7 @@
   background-color: var(--color-card);
   border: solid .2rem var(--color-title);
   border-radius: .4rem;
-  justify-content: space-evenly;
+  gap: 1rem;
 }
 
 .methods {
@@ -67,11 +67,6 @@
   border-color: var(--color-background-selected);
   color: var(--color-background-selected);
   outline: none;
-}
-
-.buttons {
-  display: flex;
-  gap: .2rem;
 }
 
 .pixIcon {

@@ -9,19 +9,19 @@ import style from "./styles.module.css";
 import { useEffect } from "react";
 
 export function Purchase() {
-  const {dishesToPurchase} = useDishContext();
+  const { dishesToPurchase } = useDishContext();
   const navigate = useNavigate()
 
   useEffect(() => {
-    if(dishesToPurchase.size === 0) navigate("/");
-  },[]);
+    if (dishesToPurchase.size === 0) navigate("/");
+  }, []);
 
   return (
     <MainTemplate>
       <Main>
         <div className={style.purchaseWrapper}>
           <Title type="card">Concluir pedido</Title>
-          <div>
+          <div className={style.container}>
             <PaymentMethod />
             <SelectedProducts />
           </div>
