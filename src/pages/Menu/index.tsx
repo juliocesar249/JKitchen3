@@ -26,7 +26,7 @@ export function Menu() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(); navigate("/purchase"); }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(); if(dishesToPurchase.size > 0)navigate("/purchase"); }
 
   return (
     <MainTemplate>
@@ -47,7 +47,7 @@ export function Menu() {
             />)}
           </div>
 
-          <DefaultButton type="submit">Finalizar {dishesToPurchase.size}</DefaultButton>
+          <DefaultButton type="submit">Finalizar { dishesToPurchase.size > 0 && dishesToPurchase.size}</DefaultButton>
         </form>
       </Main>
     </MainTemplate>

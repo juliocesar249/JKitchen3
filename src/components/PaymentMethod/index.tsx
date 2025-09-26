@@ -3,7 +3,7 @@ import { Title } from "../Title";
 import style from "./styles.module.css";
 import { DefaultButton } from "../DefaultButton";
 import { useState } from "react";
-import { formatCpf } from "../../utils/formatCPF";
+import { formatCpf } from "../../utils/formatCpf.ts";
 import { RouterLink } from "../RouterLink";
 
 export function PaymentMethod() {
@@ -32,7 +32,7 @@ export function PaymentMethod() {
               <label>
                 <input onChange={() => setPaymentMethodCheked(true)} className="checkbox" type="radio" name="payment" />
                 <p>
-                  <div className={style.pixIcon}></div>
+                  <span className={style.pixIcon}></span>
                   Pix
                 </p>
               </label>
