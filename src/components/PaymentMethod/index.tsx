@@ -4,7 +4,6 @@ import style from "./styles.module.css";
 import { DefaultButton } from "../DefaultButton";
 import { useState } from "react";
 import { formatCpf } from "../../utils/formatCpf.ts";
-import { RouterLink } from "../RouterLink";
 import { isValidCpf } from "../../utils/isValidCpf.ts";
 
 export function PaymentMethod() {
