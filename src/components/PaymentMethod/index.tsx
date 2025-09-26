@@ -18,7 +18,7 @@ export function PaymentMethod() {
     e.preventDefault();
     if(cpf.length === 0) return;
     if(!isValidCpf(cpf)) return;
-    setDishesToPurchase(prev => new Set());
+    setDishesToPurchase(() => new Set());
     navigate("/");
   }
 
