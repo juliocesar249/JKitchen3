@@ -30,7 +30,7 @@ export function NavBar() {
     <nav className={style.nav}>
       <div className={style.linksWrapper}>
         <RouterLink href="/" title="Cardápio" aria-label="Cardápio de items para montar o prato">Cardápio</RouterLink>
-        <RouterLink href="/contato" title="Contato" aria-label="Informações de contato">Contato</RouterLink>
+        <RouterLink href="/contact" title="Contato" aria-label="Informações de contato">Contato</RouterLink>
         <a href="#" onClick={changeTheme} title="Tema" aria-label="Alternear entre tema claro e escuro">{AllowedThemesIcons[theme]}</a>
       </div>
     </nav>
