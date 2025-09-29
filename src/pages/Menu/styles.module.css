@@ -7,13 +7,34 @@
 }
 
 .products {
-  display: flex;
-  flex-basis: initial;
-  flex-wrap: wrap;
+  display: grid;
   gap: 5rem;
   grid-column: 1;
   grid-row: 1;
-  justify-content: flex-start;
   width: 70%;
-  max-width: 1920px;
+}
+
+@media screen and (min-width: 0) {
+  .products {
+    grid-auto-flow: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .products {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .products {
+    grid-template-columns: repeat(4, auto);
+  }
 }

@@ -3,14 +3,15 @@
   background-color: var(--color-card);
   border-radius: .5rem;
   display: flex;
-  height: 7rem;
   justify-content: center;
   margin-top: 3rem;
-  padding: 0 20px;
+  padding: clamp(20px, 10vh, 25px) 20px;
 }
 
 .linksWrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
 }
 
