@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { MainTemplate } from "../../templates/MainTemplate";
 import { Main } from "../../components/Main";
 import { DefaultButton } from "../../components/DefaultButton";
+import { showMessage } from "../../adapters/showMessages";
 
 export function Menu() {
   const { dishes, dishesToPurchase, setDishesToPurchase } = useDishContext();
@@ -26,7 +27,17 @@ export function Menu() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(); if(dishesToPurchase.size > 0)navigate("/purchase"); }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { 
+    e.preventDefault(); 
+    showMessage.dismiss();
+
+    if (dishesToPurchase.size === 0) {
+      showMessage.error("Selecione ao menos um prato!");
+      return;
+    } 
+
+    navigate("/purchase");
+  }
 
   return (
     <MainTemplate>
@@ -35,19 +46,19 @@ export function Menu() {
 
           <div className={style.products}>
             {dishes.map(dish =>
-            <Card
-              key={dish.id}
-              imageUrl={dish.imageSource || "https://placehold.co/1920x1080"}
-              title={dish.name}
-              price={dish.price}
-              id={dish.id}
-              description={dish.description}
-              checked={dishesToPurchase.has(dish.id)}
-              onClick={toggleBuyProduct}
-            />)}
+              <Card
+                key={dish.id}
+                imageUrl={dish.imageSource || "https://placehold.co/1920x1080"}
+                title={dish.name}
+                price={dish.price}
+                id={dish.id}
+                description={dish.description}
+                checked={dishesToPurchase.has(dish.id)}
+                onClick={toggleBuyProduct}
+              />)}
           </div>
 
-          <DefaultButton type="submit">Finalizar { dishesToPurchase.size > 0 && dishesToPurchase.size}</DefaultButton>
+          <DefaultButton type="submit">Finalizar {dishesToPurchase.size > 0 && dishesToPurchase.size}</DefaultButton>
         </form>
       </Main>
     </MainTemplate>
