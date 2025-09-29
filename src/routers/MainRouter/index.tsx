@@ -6,7 +6,7 @@ import { Contact } from "../../pages/Contact";
 
 export function MainRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Jkitchen3">
       <Routes>
         <Route path="/" element={<Menu/>}/>
         <Route path="/purchase" element={<Purchase/>} />

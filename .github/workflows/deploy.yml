@@ -1,0 +1,32 @@
+name: "Subir build para GH"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ler Repositório
+        uses: actions/checkout@v5
+
+      - name: Preparar Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.22
+
+      - name: Instalar dependências
+        run: bun install
+
+      - name: Buildar projeto
+        run: bun run build
+
+      - name: Deploy em GitHub Pages
+        uses: peaceiris/action-gh-pages@v4
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          publish_dir: dist
+  
