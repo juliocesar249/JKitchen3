@@ -13,3 +13,4 @@
 
 - Lucide React
 - React Router
+- React Toastify
