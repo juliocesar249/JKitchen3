@@ -1,5 +1,4 @@
 .tableWrapper {
-  align-items: center;
   background-color: var(--color-card);
   border: solid .2rem var(--color-title);
   border-radius: .4rem;

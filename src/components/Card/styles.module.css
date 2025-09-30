@@ -25,13 +25,6 @@
   width: 100%;
 }
 
-.card:hover .cardImage img {
-  animation-name: slide-img;
-  animation-duration: 5s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-}
-
 .cardDescription {
   align-items: center;
   background-color: var(--color-card);
@@ -55,13 +48,6 @@
   padding: 2px;
   text-align: center;
   max-width: 100%;
-}
-
-.card:hover .cardDescription {
-  animation-name: slide-desc;
-  animation-duration: 5s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
 }
 
 @keyframes slide-desc {
