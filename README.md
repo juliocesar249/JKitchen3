@@ -31,7 +31,7 @@ De tempos em tempos eu recrio esse site para aplicar novos conhecimentos que adq
 ```
 
 Após isso acesse pelo link provido pelo terminal, algo como `http://localhost:http://localhost:4173/JKitchen3/`.
-> OBS: A `/` nofinal é essencial para o acesso ao site após o build e mesmo em modo desenvolvimento.
+> OBS: A `/` no final é essencial para o acesso ao site após o build e mesmo em modo desenvolvimento.
 > Ela foi adicionada para o funcionamento correto da biblioteca **React Router**.
 
 ## OU rode com NPM
