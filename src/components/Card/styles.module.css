@@ -6,7 +6,7 @@
 }
 
 .card:hover {
-  transform: scale(1.02); 
+  transform: scale(1.02);
   box-shadow: 2px 2px 10px var(--color-hover-shadow);
 }
 
@@ -181,4 +181,44 @@
 
 .cardInfo input:checked::after {
   display: block;
+}
+
+@media screen and (min-width: 360px) {
+  .cardDescription {
+    animation-name: slide-desc;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  .cardImage img {
+    animation-name: slide-img;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .cardDescription {
+    animation: none;
+  }
+
+  .cardImage img {
+    animation: none;
+  }
+
+  .card:hover .cardImage img {
+    animation-name: slide-img;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  .card:hover .cardDescription {
+    animation-name: slide-desc;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
 }

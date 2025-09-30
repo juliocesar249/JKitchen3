@@ -29,3 +29,22 @@
   border-top: solid .2rem var(--color-title);
   padding: .4rem;
 }
+
+@media screen and (min-width: 360px) {
+  .tableWrapper {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tableWrapper {
+    width: 21rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .tableWrapper {
+    width: fit-content;
+  }
+}
