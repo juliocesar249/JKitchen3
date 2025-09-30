@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const style = {
   background: "var(--color-background-selected)",
   color: "var(--color-title)",
-  fontFamily: "Open Sans",
+  fontFamily: "var(--font-default)",
 }
 
 export const showMessage = {

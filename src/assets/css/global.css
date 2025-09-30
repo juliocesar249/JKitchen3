@@ -1,3 +1,7 @@
+:root {
+  --font-default: "open-sans"
+}
+
 html {
   background-color: var(--color-background);
 }
@@ -25,7 +29,7 @@ html {
   content: "✓";
   color: var(--color-title);
   display: none;
-  font-family: "Open Sans";
+  font-family: var(--font-default);
   font-size: 1.3rem;
   font-weight: 900;
 }

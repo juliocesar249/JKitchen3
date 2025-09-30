@@ -10,7 +10,7 @@
 .table {
   border-top: solid .2rem var(--color-title);
   color: var(--color-title);
-  font-family: "Open Sans";
+  font-family: var(--font-default);
   font-size: 1.3rem;
   padding: .5rem 1rem;
   margin-top: 1rem;

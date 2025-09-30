@@ -38,7 +38,7 @@
   bottom: 0px;
   color: #fff;
   display: flex;
-  font-family: "Open Sans";
+  font-family: var(--font-default);
   height: 9rem;
   justify-content: center;
   position: absolute;
@@ -139,7 +139,7 @@
 
 .cardInfo p {
   color: var(--color-background-selected);
-  font-family: "Open Sans", serif;
+  font-family: var(--font-default), serif;
   font-size: 1.4rem;
 }
 
@@ -174,7 +174,7 @@
   content: "✓";
   color: var(--color-title);
   display: none;
-  font-family: "Open Sans";
+  font-family: var(--font-default);
   font-size: 1.3rem;
   font-weight: 900;
 }
