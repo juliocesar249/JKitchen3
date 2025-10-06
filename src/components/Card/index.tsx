@@ -1,6 +1,7 @@
 import { BadgeAlertIcon } from "lucide-react";
 import { formatPrice } from "../../utils/formatPrice";
 import style from "./styles.module.css";
+import { memo } from "react";
 
 type CardProps = {
   imageUrl: string;
@@ -11,7 +12,7 @@ type CardProps = {
   description?: string;
 } & React.ComponentProps<'label'>
 
-export function Card({ imageUrl, title, price, id, checked, description = "", ...props }: CardProps) {
+export const Card = memo(({ imageUrl, title, price, id, checked, description = "", ...props }: CardProps) => {
   function handleImageNotFound(e:React.SyntheticEvent<HTMLImageElement, Event>) {
     const target = e.target as HTMLImageElement;
     target.src = "images/imageNotFound.webp";
@@ -36,4 +37,4 @@ export function Card({ imageUrl, title, price, id, checked, description = "", ..
       </article>
     </label>
   )
-}
+})

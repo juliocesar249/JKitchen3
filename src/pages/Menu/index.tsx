@@ -6,12 +6,13 @@ import { MainTemplate } from "../../templates/MainTemplate";
 import { Main } from "../../components/Main";
 import { DefaultButton } from "../../components/DefaultButton";
 import { showMessage } from "../../adapters/showMessages";
+import { useCallback } from "react";
 
 export function Menu() {
   const { dishes, dishesToPurchase, setDishesToPurchase } = useDishContext();
   const navigate = useNavigate();
 
-  function toggleBuyProduct(e: React.MouseEvent<HTMLLabelElement, MouseEvent>) {
+  const toggleBuyProduct = useCallback((e: React.MouseEvent<HTMLLabelElement, MouseEvent>) => {
     if ("checked" in e.target) {
       const id = (e.target as HTMLInputElement).id;
       if (dishesToPurchase.has(id)) {
@@ -25,7 +26,7 @@ export function Menu() {
 
       setDishesToPurchase(prev => new Set(prev).add(id));
     }
-  }
+  }, [dishesToPurchase, setDishesToPurchase]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { 
     e.preventDefault(); 
